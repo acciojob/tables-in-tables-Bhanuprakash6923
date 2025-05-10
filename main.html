@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <table style="width: 100%; height: 100%">
-      <!-- Your code here -->
+<html>
+<head>
+    <title>Nested Tables Task</title>
+    <style>
+        table { border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Tables in Tables</h1>
+    
+    <!-- Main Table -->
+    <table border="1">
+        <tr>
+            <!-- First nested table -->
+            <td>
+                <table border="1">
+                    <tr>
+                        <th>Nested Table 1</th>
+                    </tr>
+                    <tr>
+                        <td>HTML content cell</td>
+                    </tr>
+                </table>
+            </td>
+            
+            <!-- Second nested table -->
+            <td>
+                <table border="1">
+                    <tr>
+                        <th>Nested Table 2</th>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                    </tr>
+                    <tr>
+                        <td>Row 1 Data</td>
+                        <td>Row 1 Data</td>
+                        <td>Row 1 Data</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <tr>
+            <!-- Third nested table with list -->
+            <td>
+                <table border="1">
+                    <tr>
+                        <th>Nested Table 3</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>List item 1</li>
+                                <li>List item 2</li>
+                                <li>List item 3</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            
+            <!-- Fourth nested table with colored cell -->
+            <td>
+                <table border="1">
+                    <tr>
+                        <th>Nested Table 4</th>
+                    </tr>
+                    <tr>
+                        <td style="background-color: black; color: white;">
+                            HTML
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
     </table>
-  </body>
+</body>
 </html>
