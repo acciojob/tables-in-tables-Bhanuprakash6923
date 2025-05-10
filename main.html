@@ -5,19 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nested HTML Tables</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
         table {
             border-collapse: collapse;
             width: 100%;
             margin: 10px 0;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
         th, td {
-            border: 1px solid black;
-            padding: 8px;
+            border: 1px solid #ccc;
+            padding: 10px;
             text-align: left;
+        }
+        caption {
+            font-weight: bold;
+            padding: 8px;
+            caption-side: top;
         }
         .black-background {
             background-color: black;
             color: white;
+        }
+        .nested-table {
+            margin: 10px;
+        }
+        @media (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -25,64 +44,80 @@
 
     <table>
         <tr>
-            <td>
+            <td class="nested-table">
                 <table>
                     <caption>Nested Table 1</caption>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                    </tr>
-                    <tr>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Column 1</th>
+                            <th scope="col">Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data 1</td>
+                            <td>Data 2</td>
+                        </tr>
+                    </tbody>
                 </table>
             </td>
-            <td>
+            <td class="nested-table">
                 <table>
                     <caption>Nested Table 2</caption>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                    </tr>
-                    <tr>
-                        <td>Data 3</td>
-                        <td>Data 4</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Column 1</th>
+                            <th scope="col">Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data 3</td>
+                            <td>Data 4</td>
+                        </tr>
+                    </tbody>
                 </table>
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="nested-table">
                 <table>
                     <caption>Nested Table 3</caption>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                    </tr>
-                    <tr>
-                        <td>Data 5</td>
-                        <td class="black-background">HTML</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Column 1</th>
+                            <th scope="col">Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data 5</td>
+                            <td class="black-background">HTML</td>
+                        </tr>
+                    </tbody>
                 </table>
             </td>
-            <td>
+            <td class="nested-table">
                 <table>
                     <caption>Nested Table 4</caption>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>List item 1</li>
-                                <li>List item 2</li>
-                                <li>List item 3</li>
-                            </ul>
-                        </td>
-                        <td>Data 6</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Column 1</th>
+                            <th scope="col">Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>List item 1</li>
+                                    <li>List item 2</li>
+                                    <li>List item 3</li>
+                                </ul>
+                            </td>
+                            <td>Data 6</td>
+                        </tr>
+                    </tbody>
                 </table>
             </td>
         </tr>
