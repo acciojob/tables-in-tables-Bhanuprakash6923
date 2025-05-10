@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nested HTML Tables</title>
+    <title>Nested Tables</title>
     <style>
         table {
             border-collapse: collapse;
             width: 100%;
-            margin: 10px 0;
         }
         th, td {
             border: 1px solid black;
-            padding: 8px;
+            padding: 10px;
             text-align: left;
         }
-        .black-background {
+        .black-cell {
             background-color: black;
             color: white;
         }
@@ -23,70 +22,87 @@
 </head>
 <body>
 
-    <table>
-        <tr>
-            <td>
-                <table>
-                    <caption>Nested Table 1</caption>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                    </tr>
-                    <tr>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                    </tr>
-                </table>
-            </td>
-            <td>
-                <table>
-                    <caption>Nested Table 2</caption>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                    </tr>
-                    <tr>
-                        <td>Data 3</td>
-                        <td>Data 4</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <table>
-                    <caption>Nested Table 3</caption>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                    </tr>
-                    <tr>
-                        <td>Data 5</td>
-                        <td class="black-background">HTML</td>
-                    </tr>
-                </table>
-            </td>
-            <td>
-                <table>
-                    <caption>Nested Table 4</caption>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>List item 1</li>
-                                <li>List item 2</li>
-                                <li>List item 3</li>
-                            </ul>
-                        </td>
-                        <td>Data 6</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+<table>
+    <tr>
+        <th>Main Table</th>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <th>Nested Table 1</th>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Data A</td>
+                    <td>Data B</td>
+                    <td>Data C</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Data D</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <th>Nested Table 2</th>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                </tr>
+                <tr>
+                    <td class="black-cell">HTML</td>
+                    <td>Data E</td>
+                    <td>Data F</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <ul>
+                            <li>List item 1</li>
+                            <li>List item 2</li>
+                            <li>List item 3</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <th>Nested Table 3</th>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                </tr>
+                <tr>
+                    <td>Data G</td>
+                    <td>Data H</td>
+                    <td>Data I</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <th>Nested Table 4</th>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                </tr>
+                <tr>
+                    <td>Data J</td>
+                    <td>Data K</td>
+                    <td>Data L</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 
 </body>
 </html>
